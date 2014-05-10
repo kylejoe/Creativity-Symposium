@@ -355,3 +355,18 @@ footer a:hover{
   color: #00cc66;
   text-decoration: none;
   }
+
+
+/*Speakers Page*/
+#images-accordion{
+  float: left;
+  margin-right: 10px; 
+  height: 150px;
+  width: 150px;
+  border-radius: 8px;
+}
+
+  #accordion{
+    width: 73%;
+    float: left;
+  }

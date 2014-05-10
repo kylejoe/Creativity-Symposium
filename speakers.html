@@ -9,6 +9,87 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+
+  <!-- jQuery Accordion -->
+  <link rel="stylesheet" href="/Creativity Symposium/accordion_style/jquery-ui-1.10.4.custom/css/limes-theme/jquery-ui-1.10.4.custom.css"/>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <!-- jQuery Accordion End -->
+
+  <script>
+
+  $(function() {
+    $( "#accordion" ).accordion({
+      event: "click hoverintent"
+    });
+  });
+ 
+  /*
+   * hoverIntent | Copyright 2011 Brian Cherne
+   * http://cherne.net/brian/resources/jquery.hoverIntent.html
+   * modified by the jQuery UI team
+   */
+  $.event.special.hoverintent = {
+    setup: function() {
+      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    teardown: function() {
+      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
+    },
+    handler: function( event ) {
+      var currentX, currentY, timeout,
+        args = arguments,
+        target = $( event.target ),
+        previousX = event.pageX,
+        previousY = event.pageY;
+ 
+      function track( event ) {
+        currentX = event.pageX;
+        currentY = event.pageY;
+      };
+ 
+      function clear() {
+        target
+          .unbind( "mousemove", track )
+          .unbind( "mouseout", clear );
+        clearTimeout( timeout );
+      }
+ 
+      function handler() {
+        var prop,
+          orig = event;
+ 
+        if ( ( Math.abs( previousX - currentX ) +
+            Math.abs( previousY - currentY ) ) < 7 ) {
+          clear();
+ 
+          event = $.Event( "hoverintent" );
+          for ( prop in orig ) {
+            if ( !( prop in event ) ) {
+              event[ prop ] = orig[ prop ];
+            }
+          }
+          // Prevent accessing the original event since the new event
+          // is fired asynchronously and the old event is no longer
+          // usable (#6028)
+          delete event.originalEvent;
+ 
+          target.trigger( event );
+        } else {
+          previousX = currentX;
+          previousY = currentY;
+          timeout = setTimeout( handler, 100 );
+        }
+      }
+ 
+      timeout = setTimeout( handler, 100 );
+      target.bind({
+        mousemove: track,
+        mouseout: clear
+      });
+    }
+  };
+  </script>
 </head>
 
 <body>
@@ -36,69 +117,105 @@
 	
 	</header>
     
+
 	<div id="site_content">		
 	
 	  <div id="content">
 		
-		  <h1>Welcome To Your Website</h1> 
-          <p>This standards compliant, simple, fixed width website template is released as an 'open source' design (under the Creative Commons Attribution 3.0 Licence), which means that you are free to download and use it for anything you want (including modifying and amending it). If you wish to remove the &ldquo;website template by Free HTML5 Templates&rdquo;, all I ask is for a donation of &pound;20.00 GBP. Please feel free to contact me with any questions you may have about my free HTML5 website templates or bespoke work.</p>   				  		
-	
-          <div class="slideshow">
-	        <ul class="slideshow">
-              <li class="show"><img width="650" height="300" src="images/home_1.jpg" alt="&quot;Enter your caption here&quot;" /></li>
-              <li><img width="650" height="300" src="images/home_2.jpg" alt="&quot;Enter your caption here&quot;" /></li>
-            </ul> 
-	      </div><!--close slideshow-->	
+		  <h1>Speakers</h1> 
+          <p></p>   				  		
+			<div id="accordion">
+				<h3>Patti Dobrowolski</h3>
+					<div>
+						<img src="images/patti_dobrowolski.jpg" id="images-accordion" />
+						<p>
+						Boost your creative genius! Visual thinker <strong>Patti Dobrowolski</strong> captivates and inspires audiences using the business leadership tool of the future: <a href='http://www.upyourcreativegenius.com/product/drawing-solutions-how-visual-goal-setting-will-change-your-life/'>Drawing Solutions</a>. A TEDx <a href="https://www.youtube.com/watch?v=zESeeaFDVSw&safe=active">speaker</a>, critically acclaimed comic performer, writer and business consultant, Patti’s innovative visual presentations and team gamestorming sessions boost employee and leadership creativity to transform NGOs, Fortune 500 companies, B2B or startups around the globe. Leaders at all levels are inspired to apply visual thinking in every presentation, town hall or staff meeting they hold in the future.
+						</p>
+					</div>
+				<h3>Speaker 2</h3>
+					<div>
+						<p>
+						Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
+						purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
+						velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
+						suscipit faucibus urna.
+						</p>
+					</div>
+				<h3>Speaker 3</h3>
+					<div>
+						<p>
+						Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
+						Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
+						ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
+						lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
+						</p>
+							<ul>
+								<li>List item one</li>
+								<li>List item two</li>
+								<li>List item three</li>
+							</ul>
+					</div>
+				<h3>Speaker 4</h3>
+					<div>
+						<p>
+						Cras dictum. Pellentesque habitant morbi tristique senectus et netus
+						et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
+						faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
+						mauris vel est.
+						</p>
+						<p>
+						Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
+						Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
+						inceptos himenaeos.
+						</p>
+					</div>
+			</div>
 	
 	      <div class="sidebar_container">       
 		    <div class="sidebar">
               <div class="sidebar_item">
-                <h2>New Website</h2>
-                <p>Welcome to our new website. Please have a look around, any feedback is much appreciated.</p>
+                  <h2>Buy Tickets</h2>
+	                <div id="image_location">
+	                	<a href="http://www.creativitysympoisum.brownpapertickets.com" target="_blank"><img src="images/ticket.png"/></a>
+	                </div>
               </div><!--close sidebar_item--> 
             </div><!--close sidebar-->     		
 		    <div class="sidebar">
               <div class="sidebar_item">
-                <h2>Latest Update</h2>
-                <h3>January 2014</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>         
+                 <h2>Find Us on Facebook</h2>
+                <div id="Facebook_box">Find Us on facebook</div>         
 		      </div><!--close sidebar_item--> 
             </div><!--close sidebar-->	
-		    <div class="sidebar">
-              <div class="sidebar_item">
-                <h3>December 2013</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>         
-		      </div><!--close sidebar_item--> 
-            </div><!--close sidebar-->		  
+  
             <div class="sidebar">
               <div class="sidebar_item">
                 <h2>Contact</h2>
-                <p>Phone: +44 (0)1234 567891</p>
-                <p>Email: <a href="mailto:info@youremail.co.uk">info@youremail.co.uk</a></p>
+				<p>Phone: ?????????</p>
+                <p>Email: <a href="annasunchoi@gmail.com ">annasunchoi@gmail.com </a></p>
               </div><!--close sidebar_item--> 
             </div><!--close sidebar-->
            </div><!--close sidebar_container-->				
 		
-		  <div class="content_item">		  
+     <!-- 		  <div class="content_item">		  
 		    <div class="content_imagetext">
 		      <div class="content_image">
 		        <img src="images/image1.jpg" alt="image1"/>
 	          </div>
 		      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elit sapien, tempus sit amet hendrerit volutpat, euismod vitae risus. Etiam consequat, sem et vulputate dapibus, diam enim tristique est, vitae porta eros mauris ut orci. Praesent sed velit odio. Ut massa arcu, suscipit viverra molestie at, aliquet a metus. Nullam sit amet tellus dui, ut tincidunt justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis egestas laoreet. Nunc non ipsum metus, non laoreet urna. Vestibulum quis risus quis diam mattis tempus. Vestibulum suscipit pretium tempor. </p>
-		    </div><!--close content_imagetext-->		  
+		    </div>close content_imagetext		  
 		    <div class="content_container">
 		      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus tincidunt.</p>
 		  	  <div class="button_small">
 		        <a href="#">Read more</a>
-		      </div><!--close button_small-->
-		    </div><!--close content_container-->
+		      </div><!--close button_small
+		    </div><!--close content_container
             <div class="content_container">
 		      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus tincidunt.</p>          
 		  	  <div class="button_small">
 		        <a href="#">Read more</a>
-		      </div><!--close button_small-->		  
-		    </div><!--close content_container-->			  
-		  </div><!--close content_item-->	  
+		      </div><!--close button_small		  
+		    </div><!--close content_container			  
+		  </div><!--close content_item	 --> 
 	  
 	  </div><!--close content-->   
 	
@@ -111,9 +228,10 @@
   
   </div><!--close main-->
   
+  <!-- THIS JAVASCRIPT WOULD NOT ALLOW MY jQUERY Accordion to run -->
   <!-- javascript at the bottom for fast page loading -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/image_slide.js"></script>
+<!--   // <script type="text/javascript" src="js/jquery.min.js"></script>
+  // <script type="text/javascript" src="js/image_slide.js"></script> -->
   
 </body>
 </html>
