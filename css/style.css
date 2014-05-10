@@ -1,5 +1,5 @@
 @font-face { 
-  font-family: News Cycle; 
+  font-family: Century-Gothic; 
     src: url('../fonts/NewsCycle-Regular.eot'); 
     src: local("News Cycle"), url('../fonts/NewsCycle-Regular.ttf'); 
 } 
@@ -32,7 +32,7 @@ img
 
 h1, h2, h3, h4, h5, h6 
 { font: bold 150% 'News Cycle', Arial, sans-serif;
-  color: #E25506;
+  color: #00cc66;
   text-shadow: 1px 1px #AAA;
   margin: 10px 0 10px 0;}
 
@@ -103,7 +103,8 @@ header
 { font: normal 260% 'News Cycle', Arial, sans-serif;
   letter-spacing: -2px;
   text-shadow: 1px 1px #000;
-  color: #E25506;}
+  color: #00cc66;
+  width: 250%;}
   
 nav
 { width: 660px;
@@ -138,10 +139,10 @@ ul#nav li a
 ul#nav li.current a, ul#nav li:hover a
 { text-shadow: 1px 1px #000;
   color: #FFF;
-  background: #E25506;
-  background: -moz-linear-gradient(#FE9962, #E25506);
-  background: -o-linear-gradient(#FE9962, #E25506);
-  background: -webkit-linear-gradient(#FE9962, #E25506);
+  background: #00cc66;
+  background: -moz-linear-gradient(#00FF99, #00cc66);
+  background: -o-linear-gradient(#00FF99, #00cc66);
+  background: -webkit-linear-gradient(#00FF99, #00cc66);
   border-radius: 7px 7px 7px 7px;
   -moz-border-radius: 7px 7px 7px 7px;
   -webkit-border: 7px 7px 7px 7px;}
@@ -170,7 +171,8 @@ ul#nav li.current a, ul#nav li:hover a
 { padding: 5px 0 0 0;
   font: bold 150% 'News Cycle', Arial, sans-serif;
   height: 30px;
-  color: #000;} 
+  color: #000;
+  text-align: center;} 
 
 #content
 { width: 940px;
@@ -222,10 +224,10 @@ footer a:hover
   float: left;
   padding: 5px 15px 7px 10px;
   border: 1px solid #FFF; 
-  background: #E25506;
-  background: -moz-linear-gradient(#FE9962, #E25506);
-  background: -o-linear-gradient(#FE9962, #E25506);
-  background: -webkit-linear-gradient(#FE9962, #E25506);
+  background: #00cc66;
+  background: -moz-linear-gradient(#00FF99, #00cc66);
+  background: -o-linear-gradient(#00FF99, #00cc66);
+  background: -webkit-linear-gradient(#00FF99, #00cc66);
   border-radius: 7px 7px 7px 7px;
   -moz-border-radius: 7px 7px 7px 7px;
   -webkit-border: 7px 7px 7px 7px;
@@ -275,10 +277,10 @@ footer a:hover
   height: 26px;
   padding: 2px 0 3px 0;
   cursor: pointer; 
-  background: #E25506;
-  background: -moz-linear-gradient(#FE9962, #E25506);
-  background: -o-linear-gradient(#FE9962, #E25506);
-  background: -webkit-linear-gradient(#FE9962, #E25506);
+  background: #00cc66;
+  background: -moz-linear-gradient(#00FF99, #00cc66);
+  background: -o-linear-gradient(#00FF99, #00cc66);
+  background: -webkit-linear-gradient(#00FF99, #00cc66);
   border-radius: 7px 7px 7px 7px;
   -moz-border-radius: 7px 7px 7px 7px;
   -webkit-border: 7px 7px 7px 7px;
@@ -335,4 +337,21 @@ ul img {
   color: #FFF;
   text-shadow: 1px 1px #000;}
  
- 
+/*///////////////////////My Edits///////////////////////////////////*/
+
+ #Facebook_box{
+  height: 300px;
+  width: auto;
+  border: 1px solid black;
+ }
+
+#image_location{
+  width: 128px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer a:hover{
+  color: #00cc66;
+  text-decoration: none;
+  }

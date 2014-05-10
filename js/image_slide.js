@@ -63,4 +63,6 @@ function gallery() {
     current.animate({opacity: 0.0}, 1000).removeClass('show');
 
   }
+
+
 }
