@@ -22,8 +22,8 @@ session_start();
   <!-- jQuery -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-  <!-- Validation for contact -->
-  <script type="text/javascript" src="js/email_validation.js"></script>
+    <!-- favicon -->
+  <link rel="icon" href="images/circle_yellow.ico" type="image/gif" sizes="16x16">
 </head>
 
 <body>
@@ -114,10 +114,6 @@ session_start();
      <div class="ccfield-prepend">
         <input class="ccformfield" type="text" name='subject' placeholder="Subject" required>
     </div>
-    <!-- Might add captcha validation -->
-<!--     <div class="ccfield-prepend">
-        <textarea class="ccformfield" name="comments" rows="8" placeholder="Message" required></textarea>
-    </div> -->
     <div class="ccfield-prepend">
         <textarea class="ccformfield" name="comments" rows="8" placeholder="Message" required></textarea>
     </div>

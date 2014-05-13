@@ -32,12 +32,13 @@ img
 
 h1, h2, h3, h4, h5, h6 
 { font: bold 150% 'News Cycle', Arial, sans-serif;
-  color: #0000ff;
+  color: #C8571D;
   text-shadow: 1px 1px #AAA;
   margin: 10px 0 10px 0;}
 
 h2
-{ font: bold 150% 'News Cycle', Arial, sans-serif;}
+{ font: bold 150% 'News Cycle', Arial, sans-serif;
+color: #C8571D;}
 
 h3
 { font: bold 120% 'News Cycle', Arial, sans-serif;}
@@ -165,8 +166,9 @@ ul#nav li.current a, ul#nav li:hover a
 
 .sidebar
 { float: left;
-  width: 240px;
-  margin: 0 0px 10px 0;}
+width: 300px;
+text-align: left;
+margin-left: -25%;}
 
 .sidebar_item
 { width: 220px;}
@@ -345,7 +347,7 @@ ul img {
 /*///////////////////////My Edits///////////////////////////////////*/
 
 
-/*Every Page*/
+/*-----------------Every Page-------------------------------------*/
 
 .btn.btn-danger{
   position: absolute;
@@ -354,18 +356,13 @@ ul img {
   font-size: 16px;
   font-weight: bold;
   font-family: Arial;
-  background-color: black
+  background-color: black;
+  border:black;
 }
 
   .btn.btn-danger:hover{
     background-color: #0000ff;
   }
-
- #Facebook_box{
-  height: 300px;
-  width: auto;
-  border: 1px solid black;
- }
 
 #image_location{
   width: 128px;
@@ -379,7 +376,6 @@ footer a:hover{
   }
 
 
-/*-------------------------Every Page------------------*/
 
 footer{
   height: 100px;
@@ -460,7 +456,15 @@ footer{
   width: 100%;
 }
 
+.heading_change{
+  color: #C8571D;
+  font-weight: bold;
+}
 
+#heading_change_program{
+  color: #C8571D;
+  font-weight: bold;
+}
 /*---------------------------Contact----------------------------------*/
 
 .success_message{
@@ -523,7 +527,7 @@ footer{
   font-family: 'Lato',Arial,sans-serif;
   font-size:14px;
   border: 1px solid grey;
-  border-radius: 8px;
+  /*border-radius: 8px;*/ /*WHY CAN I NOT GET THE BLUE BOX TO HAVE A BORDER RADIUS*/
 }
 
 .ccformfield {
