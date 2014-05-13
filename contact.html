@@ -9,6 +9,15 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+
+    <!-- Bootstrap -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+  <!-- jQuery -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+  <!-- Validation for contact -->
+  <script type="text/javascript" src="js/email_validation.js"></script>
 </head>
 
 <body>
@@ -30,6 +39,7 @@
             <li><a href="team.html">Team</a></li>
             <li class="current"><a href="contact.html">Contact Us</a></li>
           </ul>
+          <a href="http://www.creativitysympoisum.brownpapertickets.com" target="_blank"><button type="button" class="btn btn-danger" id="tickets_btn">Buy Tickets</button></a>
         </nav>
       
 	  </div>		
@@ -40,56 +50,79 @@
 	
 	  <div id="content">
 	
-        <h2>Contact Us</h2>
-        <p>A contact form requires some method of emailing the contents of the form to an email address. The most common way to do this is to use some kind of server script (PHP for example). I would be happy to send you the PHP code for the contact form for your chosen template, I charge &pound;20.00GBP for this. Simply contact me for more details.</p>
+        <!-- <h2>Contact Us</h2> -->
+
 	
-        <div class="slideshow">
+<!--         <div class="slideshow">
 	      <ul class="slideshow">
             <li class="show"><img width="650" height="300" src="images/home_1.jpg" alt="&quot;Enter your caption here&quot;" /></li>
             <li><img width="650" height="300" src="images/home_2.jpg" alt="&quot;Enter your caption here&quot;" /></li>
           </ul> 
-	    </div><!--close slideshow-->			
+	    </div>	
 		
 		<div class="sidebar_container">       
 		  <div class="sidebar">
             <div class="sidebar_item">
               <h2>New Website</h2>
               <p>Welcome to our new website. Please have a look around, any feedback is much appreciated.</p>
-            </div><!--close sidebar_item--> 
-          </div><!--close sidebar-->     		
+            </div> 
+          </div>     		
 		  <div class="sidebar">
             <div class="sidebar_item">
               <h2>Latest Update</h2>
               <h3>January 2014</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>         
-		    </div><!--close sidebar_item--> 
-          </div><!--close sidebar-->	
+		    </div> 
+          </div>	
 		  <div class="sidebar">
             <div class="sidebar_item">
               <h3>December 2013</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>         
-		    </div><!--close sidebar_item--> 
-          </div><!--close sidebar-->		  
+		    </div> 
+          </div>		  
           <div class="sidebar">
             <div class="sidebar_item">
               <h2>Contact</h2>
               <p>Phone: +44 (0)1234 567891</p>
               <p>Email: <a href="mailto:info@youremail.co.uk">info@youremail.co.uk</a></p>
-            </div><!--close sidebar_item--> 
-          </div><!--close sidebar-->
-        </div><!--close sidebar_container-->          
+            </div> 
+          </div>
+        </div>   
 		  
-		  <div class="content_item">
+		  <div class="content_item"> -->
 		    
-			<div class="form_settings">           
-			  <p><span>Name</span><input class="contact" type="text" name="your_name" value="" /></p>
-              <p><span>Email Address</span><input class="contact" type="text" name="your_email" value="" /></p>
-			  <p><span>Message</span><textarea class="contact textarea" rows="8" cols="50" name="your_message"></textarea></p>
-              <p style="padding: 10px 0 10px 0;">Please enter the answer to this simple maths question (to prevent spam)</p>
-			  <p><span>Maths Question: 9 + 3 = ?</span><input type="text" name="user_answer" class="contact" /><input type="hidden" name="answer" value="4d76fe9775" /></p>
-              <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="Send" /></p>
-            </div><!--close form_settings-->
-		  
+		         
+                <div class="contact-box fadeInDownBig">
+                  <div class="contact-box-header group">
+                    <!--<div class="contact-photo"></div>-->
+                    <h2>Contact</h2>
+                   </div>
+                  <form id="contact-form">
+                    <div id="form_wrapper">
+                    <div class="row group">
+                      <div class="col2">
+                        <label class="form-icon name-icon"></label>
+                        <input type="text" placeholder="Name" name="name" id="name" required>
+                      </div>
+                      <div class="col2">
+                        <label class="form-icon email-icon"></label>
+                        <input type="email" placeholder="Email" name="email" id="email" required>
+                      </div>
+                    </div>
+                    <div class="row group">
+                      <div class="col1 last">
+                        <label class="form-icon edit-icon"></label>
+                        <textarea rows="15" placeholder="Message" required name="message" id="message"></textarea>
+                      </div>
+                    </div>
+                    <div class="contact-box-footer group">
+                      <input type="submit" value="Send">
+                    </div>
+                  </div>
+                  </form>
+                </div>
+            
+
 		  </div><!--close content_item-->	
       
 	  </div><!--close content-->   
@@ -98,14 +131,14 @@
   
     <footer>
 	  <a href="index.html">Home</a> | <a href="speakers.html">Speakers</a> | <a href="attend.html">Attend</a> | <a href="team.html">Team</a> | <a href="contact.html">Contact Us</a><br/><br/>
-	  <!-- website template by <a href="http://www.freehtml5templates.co.uk">Free HTML5 Templates</a> -->
+	  Email: annasunchoi@gmail.com
     </footer>   
   
   </div><!--close main-->
 
   <!-- javascript at the bottom for fast page loading -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/image_slide.js"></script>	
+  // <!-- <script type="text/javascript" src="js/jquery.min.js"></script>
+  // <script type="text/javascript" src="js/image_slide.js"></script> -->	
   
 </body>
 </html>

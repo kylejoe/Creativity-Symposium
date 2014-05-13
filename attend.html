@@ -9,6 +9,9 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="js/modernizr-1.5.min.js"></script>
+
+    <!-- Bootstrap -->
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 </head>
 
 <body>
@@ -18,9 +21,7 @@
 	  
 	  <div id="header_section">	  
 	    
-		<div id="welcome">
-	      <h2>Creativity Symposium</h2>
-	    </div><!--close welcome-->			  	
+	  	
 	  
 	    <nav>
           <ul id="nav">
@@ -28,8 +29,9 @@
             <li><a href="speakers.html">Speakers</a></li>
             <li class="current"><a href="attend.html">Attend</a></li>
             <li><a href="team.html">Team</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.php">Contact Us</a></li>
           </ul>
+          <a href="http://www.creativitysympoisum.brownpapertickets.com" target="_blank"><button type="button" class="btn btn-danger" id="tickets_btn">Buy Tickets</button></a>
         </nav>
       
 	  </div>		
@@ -40,79 +42,100 @@
 	
 	  <div id="content">
         
-        <h2>Testimonials</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elit sapien, tempus sit amet hendrerit volutpat, euismod vitae risus. Etiam consequat, sem et vulputate dapibus, diam enim tristique est, vitae porta eros mauris ut orci. Praesent sed velit odio. Ut massa arcu, suscipit viverra molestie at, aliquet a metus. Nullam sit amet tellus dui, ut tincidunt justo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis egestas laoreet. Nunc non ipsum metus, non laoreet urna. Vestibulum quis risus quis diam mattis tempus. Vestibulum suscipit pretium tempor. </p>		
+        <h2>Attend</h2>
+    		<p>Join us Saturday, June 7, 2014 from 10:00am - 3:00pm at the Fremont Abbey Arts Center.
+
+    Tickets are $100 and include heavy horderves for lunch, water/tea, a live performance of Jen Hopper, The Bravest Women in Seattle, keynote speaker Patti Dubrowolski from Up Your Creative Genius, and several other speakers through 3 breakout sessions, along with quality connections and good company. 
+
+    The event is created as a whole "experience" in three segments, so please plan on attending the entire duration.  For the latest updates, visit our <a href="https://www.facebook.com/events/763775833640456/" target="_blank">Facebook</a> page.</p>		
 		
-        <div class="slideshow">
-	      <ul class="slideshow">
-            <li class="show"><img width="650" height="300" src="images/home_1.jpg" alt="&quot;Enter your caption here&quot;" /></li>
-            <li><img width="650" height="300" src="images/home_2.jpg" alt="&quot;Enter your caption here&quot;" /></li>
-          </ul> 
-	    </div><!--close slideshow-->		    
+        <!-- <div class="slideshow"> -->
+<!-- 	      <ul class="slideshow">
+            <li class="show"><img width="650" height="300" src="images/freemont_abbey_arts_center1.jpg"/></li>
+          </ul>  -->
+          <img src="images/freemont_abbey_arts_center1.jpg" width="650" height="300">
+	    <!-- </div>close slideshow		     -->
 		
-		<div class="sidebar_container">       
+		<div class="sidebar_container" >       
 		  <div class="sidebar">
-            <div class="sidebar_item">
-              <h2>New Website</h2>
-              <p>Welcome to our new website. Please have a look around, any feedback is much appreciated.</p>
-            </div><!--close sidebar_item--> 
-          </div><!--close sidebar-->     		
-		  <div class="sidebar">
+            <div class="sidebar_item" id="program_container">
+              <h2>Program</h2>
+
+              <ul id="program_info">
+                <li><b>9:30</b> Doors open to public, Registration and Mingle</li>
+                <li><b>10:00</b> Event begins: Introduction</li>
+                <li><b>10:05</b> Musical Guest Performance</li>
+                <li><b>10:15</b> Breakout Session 1: At Home</li>
+                <li><b>11:00</b> Break</li>
+                <li><b>11:15</b> Breakout Session 1: In Community </li>
+                <li><b>12:00</b> Lunch, Cooking “Chef-Off” with local chefs</li>
+                <li><b>1:00</b> Mastermind Circles</li>
+                <li><b>1:30</b> Session 3: In the World</li>
+                <li><b>2:15</b> Keynote Speaker: Patti Dobrowolski from Up Your Creative Genius </li>
+                <li><b>2:50</b> Closing Remarks</li>
+                <li><b>3:00</b>: Event completes: mingle and connecting</li>
+                <li>*tentative and could be subject to change</li>
+              </ul>
+            </div> 
+          </div>     		
+<!-- 		  <div class="sidebar">
             <div class="sidebar_item">
               <h2>Latest Update</h2>
               <h3>January 2014</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>         
-		    </div><!--close sidebar_item--> 
-          </div><!--close sidebar-->	
+		    </div> 
+          </div>	
 		  <div class="sidebar">
             <div class="sidebar_item">
               <h3>December 2013</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>         
-		    </div><!--close sidebar_item--> 
-          </div><!--close sidebar-->		  
+		    </div> 
+          </div>		  
           <div class="sidebar">
             <div class="sidebar_item">
               <h2>Contact</h2>
               <p>Phone: +44 (0)1234 567891</p>
               <p>Email: <a href="mailto:info@youremail.co.uk">info@youremail.co.uk</a></p>
-            </div><!--close sidebar_item--> 
-          </div><!--close sidebar-->
-        </div><!--close sidebar_container-->			  
+            </div> 
+          </div> -->
+        </div>	  
 		  
-		  <div class="content_item">
+<!-- 		  <div class="content_item">
 			
 			<div class="content_container">
 			  <h3>Mr Joe Bloggs</h3>
 			  <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus tincidunt.&rdquo;</p>
-			</div><!--close content_container-->
+			</div>
             <div class="content_container">
 			  <h3>Mr Joe Bloggs</h3>
 			  <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus tincidunt.&rdquo;</p>
-			</div><!--close content_container--> 
-			<div class="content_container">
+			</div>			<div class="content_container">
 			  <h3>Mr Joe Bloggs</h3>
 			  <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus tincidunt.&rdquo;</p>
-			</div><!--close content_container-->
+			</div>
             <div class="content_container">
 			  <h3>Mr Joe Bloggs</h3>
 			  <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim. Aliquam facilisis neque non nunc posuere eget volutpat metus tincidunt.&rdquo;</p>
-			</div><!--close content_container--> 
+			</div>
 		  
-		  </div><!--close content_item-->			    	    
-		
-      </div><!--close content-->   
-	</div><!--close site_content-->  	
+		  </div>	    	    
+ -->		
+      <h2>Location</h2>
+      <p><b>ADDRESS</b> 4272 Fremont Avenue North, Seattle, WA</p>
+      <p><b>PARKING</b> There is ample street parking around the Fremont Abbey.</p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2687.299133199478!2d-122.349686!3d47.65918500000001!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549014533812de89%3A0xa3e260ebb16fed6b!2s4272+Fremont+Ave+N!5e0!3m2!1sen!2sus!4v1399877039973" width="600" height="450" frameborder="0" style="border:0"></iframe>
+      </div> 
+	</div>
   
     <footer>
-	  <a href="index.html">Home</a> | <a href="speakers.html">Speakers</a> | <a href="attend.html">Attend</a> | <a href="team.html">Team</a> | <a href="contact.html">Contact Us</a><br/><br/>
-	  <!-- website template by <a href="http://www.freehtml5templates.co.uk">Free HTML5 Templates</a> -->
+	  <a href="index.html">Home</a> | <a href="speakers.html">Speakers</a> | <a href="attend.html">Attend</a> | <a href="team.html">Team</a> | <a href="contact.php">Contact Us</a><br/>
+	  Email: <a href="mailto:annasunchoi@gmail.com">annasunchoi@gmail.com</a>
     </footer>   
   
   </div><!--close main-->
 
   <!-- javascript at the bottom for fast page loading -->
-  <script type="text/javascript" src="js/jquery.min.js"></script>
-  <script type="text/javascript" src="js/image_slide.js"></script>	
+
   
 </body>
 </html>
