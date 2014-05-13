@@ -94,7 +94,7 @@ session_start();
 		    
 		         
         
-    <h1 style="text-align:center">Contact</h1> 
+    <h1 style="text-align:center" class="heading_change">Contact</h1> 
 <div class="wrapper">
 
     <?php
@@ -108,6 +108,9 @@ session_start();
     ?>
     <form method="post" action="process.php" class="ccform">
     <div class="ccfield-prepend">
+    <div class="ccfield-prepend">
+        <input class="ccformfield" type="text" name='name' placeholder="Full Name" required>
+    </div>
       <!-- Type Email uses correct HTML5 validation -->
         <input class="ccformfield" type="email" name='email' placeholder="Email" required>
     </div>
