@@ -38,9 +38,9 @@ session_start();
             <li><a href="speakers.html">Speakers</a></li>
             <li><a href="attend.html">Attend</a></li>
             <li><a href="team.html">Team</a></li>
-            <li class="current"><a href="contact.php">Contact Us</a></li>
+            <li class="current"><a href="contact.php">Contact</a></li>
           </ul>
-          <a href="http://www.creativitysympoisum.brownpapertickets.com" target="_blank"><button type="button" class="btn btn-danger" id="tickets_btn">Buy Tickets</button></a>
+         <a href="http://www.brownpapertickets.com/event/670731" target="_blank"><button type="button" class="btn btn-danger" id="tickets_btn">Buy Tickets</button></a>
         </nav>
       
 	  </div>		
@@ -51,52 +51,12 @@ session_start();
 	
 	  <div id="content">
 	
-        <!-- <h2>Contact Us</h2> -->
-
-	
-<!--         <div class="slideshow">
-	      <ul class="slideshow">
-            <li class="show"><img width="650" height="300" src="images/home_1.jpg" alt="&quot;Enter your caption here&quot;" /></li>
-            <li><img width="650" height="300" src="images/home_2.jpg" alt="&quot;Enter your caption here&quot;" /></li>
-          </ul> 
-	    </div>	
-		
-		<div class="sidebar_container">       
-		  <div class="sidebar">
-            <div class="sidebar_item">
-              <h2>New Website</h2>
-              <p>Welcome to our new website. Please have a look around, any feedback is much appreciated.</p>
-            </div> 
-          </div>     		
-		  <div class="sidebar">
-            <div class="sidebar_item">
-              <h2>Latest Update</h2>
-              <h3>January 2014</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>         
-		    </div> 
-          </div>	
-		  <div class="sidebar">
-            <div class="sidebar_item">
-              <h3>December 2013</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque cursus tempor enim.</p>         
-		    </div> 
-          </div>		  
-          <div class="sidebar">
-            <div class="sidebar_item">
-              <h2>Contact</h2>
-              <p>Phone: +44 (0)1234 567891</p>
-              <p>Email: <a href="mailto:info@youremail.co.uk">info@youremail.co.uk</a></p>
-            </div> 
-          </div>
-        </div>   
-		  
-		  <div class="content_item"> -->
-		    
 		         
         
     <h1 style="text-align:center" class="heading_change">Contact</h1> 
 <div class="wrapper">
 
+  <p>For any questions, please use the form below and we will return your contact within 24 business hours. If this is an urgent matter, you may call the Event Producer Anna Choi at (805) 369-1569.</p>
     <?php
 
     if (isset($_SESSION['success'])) 
@@ -134,7 +94,7 @@ session_start();
 	</div><!--close site_content-->  	
   
     <footer>
-	  <a href="index.html">Home</a> | <a href="speakers.html">Speakers</a> | <a href="attend.html">Attend</a> | <a href="team.html">Team</a> | <a href="contact.php">Contact Us</a><br/>
+	  <a href="index.html">Home</a> | <a href="speakers.html">Speakers</a> | <a href="attend.html">Attend</a> | <a href="team.html">Team</a> | <a href="contact.php">Contact</a><br/>
 	  Email: <a href="mailto:annasunchoi@gmail.com">annasunchoi@gmail.com</a>
     </footer>   
   

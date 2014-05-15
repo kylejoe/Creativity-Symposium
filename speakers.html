@@ -22,80 +22,6 @@
     <!-- favicon -->
   <link rel="icon" href="images/circle_yellow.ico" type="image/gif" sizes="16x16">
 
-  <script>
-
-  $(function() {
-    $( "#accordion" ).accordion({
-      event: "click hoverintent"
-    });
-  });
- 
-  /*
-   * hoverIntent | Copyright 2011 Brian Cherne
-   * http://cherne.net/brian/resources/jquery.hoverIntent.html
-   * modified by the jQuery UI team
-   */
-  $.event.special.hoverintent = {
-    setup: function() {
-      $( this ).bind( "mouseover", jQuery.event.special.hoverintent.handler );
-    },
-    teardown: function() {
-      $( this ).unbind( "mouseover", jQuery.event.special.hoverintent.handler );
-    },
-    handler: function( event ) {
-      var currentX, currentY, timeout,
-        args = arguments,
-        target = $( event.target ),
-        previousX = event.pageX,
-        previousY = event.pageY;
- 
-      function track( event ) {
-        currentX = event.pageX;
-        currentY = event.pageY;
-      };
- 
-      function clear() {
-        target
-          .unbind( "mousemove", track )
-          .unbind( "mouseout", clear );
-        clearTimeout( timeout );
-      }
- 
-      function handler() {
-        var prop,
-          orig = event;
- 
-        if ( ( Math.abs( previousX - currentX ) +
-            Math.abs( previousY - currentY ) ) < 7 ) {
-          clear();
- 
-          event = $.Event( "hoverintent" );
-          for ( prop in orig ) {
-            if ( !( prop in event ) ) {
-              event[ prop ] = orig[ prop ];
-            }
-          }
-          // Prevent accessing the original event since the new event
-          // is fired asynchronously and the old event is no longer
-          // usable (#6028)
-          delete event.originalEvent;
- 
-          target.trigger( event );
-        } else {
-          previousX = currentX;
-          previousY = currentY;
-          timeout = setTimeout( handler, 100 );
-        }
-      }
- 
-      timeout = setTimeout( handler, 100 );
-      target.bind({
-        mousemove: track,
-        mouseout: clear
-      });
-    }
-  };
-  </script>
 </head>
 
 <body>
@@ -113,9 +39,9 @@
             <li class="current"><a href="speakers.html">Speakers</a></li>
             <li><a href="attend.html">Attend</a></li>
             <li><a href="team.html">Team</a></li>
-            <li><a href="contact.php">Contact Us</a></li>
+            <li><a href="contact.php">Contact</a></li>
           </ul>
-          <a href="http://www.creativitysympoisum.brownpapertickets.com" target="_blank"><button type="button" class="btn btn-danger" id="tickets_btn">Buy Tickets</button></a>
+          <a href="http://www.brownpapertickets.com/event/670731" target="_blank"><button type="button" class="btn btn-danger" id="tickets_btn">Buy Tickets</button></a>
         </nav>
       
 	  </div>		
@@ -123,121 +49,147 @@
 	</header>
     
 
-	<div id="site_content">		
+	<div id="site_content_speakers">		
 	
-	  <div id="content">
 		
 		  <h1 id="speakers_header">Speakers</h1> 
-          <p></p>   				  		
-			<div id="accordion">
-				<h3>Patti Dobrowolski</h3>
-					<div>
-						<img src="images/patti_dobrowolski.jpg" id="images-accordion" />
-						<p>
-						Boost your creative genius! Visual thinker <strong>Patti Dobrowolski</strong> captivates and inspires audiences using the business leadership tool of the future: <a href='http://www.upyourcreativegenius.com/product/drawing-solutions-how-visual-goal-setting-will-change-your-life/' target="_blank"><b>Drawing Solutions</b></a>. A TEDx <a href="https://www.youtube.com/watch?v=zESeeaFDVSw&safe=active" target="_blank"><b>speaker</b></a>, critically acclaimed comic performer, writer and business consultant, Patti’s innovative visual presentations and team gamestorming sessions boost employee and leadership creativity to transform NGOs, Fortune 500 companies, B2B or startups around the globe. Leaders at all levels are inspired to apply visual thinking in every presentation, town hall or staff meeting they hold in the future.
-						</p>
-					</div>
-				<h3>Speaker 2</h3>
-					<div>
-						<p>
-						Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-						purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-						velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-						suscipit faucibus urna.
-						</p>
-					</div>
-				<h3>Speaker 3</h3>
-					<div>
-						<p>
-						Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-						Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-						ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-						lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-						</p>
-							<ul>
-								<li>List item one</li>
-								<li>List item two</li>
-								<li>List item three</li>
-							</ul>
-					</div>
-				<h3>Speaker 4</h3>
-					<div>
-						<p>
-						Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-						et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-						faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-						mauris vel est.
-						</p>
-						<p>
-						Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-						Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-						inceptos himenaeos.
-						</p>
-					</div>
-          <h3>Speaker 5</h3>
-          <div>
-            <p>
-            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-            suscipit faucibus urna.
-            </p>
-          </div>
-          <h3>Speaker 6</h3>
-          <div>
-            <p>
-            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-            suscipit faucibus urna.
-            </p>
-          </div>
-          <h3>Speaker 7</h3>
-          <div>
-            <p>
-            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-            suscipit faucibus urna.
-            </p>
-          </div>
-          <h3>Speaker 8</h3>
-          <div>
-            <p>
-            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-            suscipit faucibus urna.
-            </p>
-          </div>
-          <h3>Speaker 9</h3>
-          <div>
-            <p>
-            Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-            purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-            velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-            suscipit faucibus urna.
-            </p>
-          </div>
-			</div>
-	
 
-	  
-	  </div><!--close content-->   
+      <div id="speakers_info">
+        <div id="image_heading_align">
+				<h3>Patti Dobrowolski</h3>
+					
+						<img src="images/patti_dobrowolski.jpg" />
+        </div>    
+            <div id="speakers_paragraphs">
+  						<p>
+  						Keynote Speaker: Patti Dobrowolski, Up Your Creative Genius<a href="http://www.upyourcreativegenius.com" target="_blank"> 
+              Boost your creative genius!</a> Visual thinker Patti Dobrowolski captivates and inspires audiences using the business leadership tool of the future: <a href="http://www.upyourcreativegenius.com/product/drawing-solutions-how-visual-goal-setting-will-change-your-life/" target="_blank">Drawing Solutions</a>. A TEDx <a href="https://www.youtube.com/watch?v=zESeeaFDVSw&safe=active" target="_blank">speaker</a>, critically acclaimed comic performer, writer and business consultant, Patti’s innovative visual presentations and team gamestorming sessions boost employee and leadership creativity to transform NGOs, Fortune 500 companies, B2B or startups around the globe. Leaders at all levels are inspired to apply visual thinking in every presentation, town hall or staff meeting they hold in the future.
+  						</p>
+          </div>
+      </div>
+      <div id="speakers_info">
+        <br><br>
+        <h3>Jennifer Hopper</h3>
+          
+            <img src="images/jennifer.jpg" />
+            <div id="speakers_paragraphs">
+              <p>Jennifer Hopper, <a href="http://proxy.bellstrike.com/" target="_blank">The Angel Band Project</a>
+              Jennifer Hopper is a 41 year old Seattle native who in the summer of 2009 became a survivor… of rape, attempted murder and the murder of her partner, Teresa Butz. Soon after, Jennifer found her and Teresa's story thrust into the media spotlight and, after the murder trial in 2011, she was the subject of the Pulitzer Prize winning article "The Bravest Woman in Seattle” written by The Stranger's Eli Sanders. Jennifer now finds herself a unique voice in speaking out and advocating for survivors of sexual violence around the country. As a singer, she was featured in The Angel Band Project, a tribute album raising awareness towards the effects of sexual violence and as a public speaker, she has told her story at local and national events aimed at raising awareness in their communities. 
+            </p>
+          </div>
+      </div>
+	   <div id="speakers_info">
+      <br><br>
+        <h3>Lisa Fitzhugh</h3>
+          
+            <img src="images/lisa.jpg" />
+            <div id="speakers_paragraphs">
+            <p>Lisa Fitzhugh, Founding Partner of <a href="http://www.creativegroundhq.com/" target="_blank">Creative Ground</a> has over 25 years experience working within the public, private and non-profit sectors. Today she facilitates healthy, more cohesive teams and more expansive, creative leadership, primarily in the public sector.
+            </p>
+            <p>Lisa is the founder and former executive director of Arts Corps, the largest arts education program in Washington State reaching underserved communities throughout King County. Arts Corps’ award winning program has become a national model for combining arts education with social change. Before Arts Corps, Lisa’s work was primarily in politics, both on the inside for elected officials and as a consultant, designing and implementing public affairs and engagement strategies. She served as an aide to Seattle Mayor Paul Schell, Seattle City Councilmember Tom Weeks, and Congressman Ben Cardin, D-MD.</p>
+            <p>As a community activist, she has served on several boards including the New School 
+              Foundation, the Children’s Music Foundation, and as co-chair of the Learning 
+              Committee for Seattle Center’s 50th Anniversary of the World’s Fair. In 2009 she served 
+              as Chair for I-100, a grassroots initiative campaign to stop the construction of a new jail. 
+              Lisa grew up in Baltimore, Maryland. She holds a political science degree from Duke 
+              University.</p>
+            </div>
+      </div>
+         <div id="speakers_info">
+          <br><br>
+        <h3>Carol Sanford</h3>
+          
+            <img src="images/carol.jpg" />
+            <div id="speakers_paragraphs">
+                <p><a href="http://www.carolsanford.com/" target="_blank">Carol Sanford</a> is founder and CEO of the Responsible Entrepreneur Institute and The Essence Alignment Company, a global consultancy. She has worked with clients such as DuPont, P&G, Intel, Agilent, and Seventh Generation, and has lectured at universities including MIT, University of Michigan, and University of Toronto. She blogs for The Economist, CNBC, CSRWire, Stanford Social Innovation Review, and other outlets. She is also the author of the award-winning book The Responsible Business (Jossey-Bass, 2011) which is required reading at Harvard, Stanford and over 100 universities. The book is used in a  Google for one  lab, as their innovation and strategy framework.  She lives in Seattle.</p>
+            </div>
+      </div>
+      <div id="speakers_info">
+        <br><br>
+        <h3>Imani Sims</h3>
+          
+            <img src="images/imani.jpg" />
+            <div id="speakers_paragraphs">
+                <p><a href="http://imani.splitsix.com/" target="_blank">Imani Sims</a> is a Seattle native who spun her first performance poem at the age of fourteen.  Since then, she has developed an infinitely rippling love for poetry in all of its forms.  She believes in the healing power of words and the transformational nuance of the human story.</p>
+                <p>She allows her selves (Healer, Woman, Poet, Storyteller, Survivor) to tell their truths through her work.  Imani is a Board Member and teacher at Bent Writing Institute, and the founder of Split Six Productions in Seattle, WA.  She is also a 2012 CD Forum Creation Artist and has featured in productions with Poetry + Motion, Generation Waking Up, Arts Corps, Seattle SPIT, Ladies First, Voices Rising, Langston Hughes Cultural Arts Center, The Tribes Project, and Hampton University.
+                Her book Twisted Oak is available on Requiem Press.</p> 
+            </div>
+      </div>
+            <div id="speakers_info">
+              <br><br>
+        <h3>Abby Lodmer</h3>
+          
+            <img src="images/abby.jpg" />
+            <div id="speakers_paragraphs">
+                <p><a href="http://www.humorhealinghumanity.com" target="_blank">Abby</a> has more energy and interests than G*d. She is a Renaissance woman if there ever was one! Abby completed her undergraduate studies at the University of Arizona with a major in Media Arts and minors in Religious Studies and Dance.</p> 
+                <p>Abby worked for the U of A's Wellness Center, creating healing programs and delivering lectures about health and drug education. During that time, Abby also embarked upon an aerobics training program- and has taught dance, aerobics and yoga in various capacities for the past 14 years.</p> 
+                <p>Abby is a passionate environmentalist, and co-founded the University's Greek Recycling program. Abby went on to do her graduate studies in Geosciences and Broadcast Meteorology at Mississippi State University, becoming a "Weather Girl" for 2 years, until she realized that her true calling was PURE PERFORMANCE, minus the science!~ (the teaching podium was her stage by day, and the comedy club, her venue by night)!</p> 
+                <p>While at MSU, Abby taught undergraduate classes in communication/media, film and editing. Upon returning from graduate school, Abby studied metaphysics and healing through <a href="http://www.placlasses.com" target="_blank">PLA</a> (Perfect Love Awakening), and became a life coach.</p> 
+                <p>Abby then received her teaching credential from California State University, Northridge and combined her trainings and studies to become a life coach/tutor/nutritional counselor for all subjects, ages, grades and learning levels! </p> 
+                <p>Abby Lodmer continues to traverse the world, bringing LIGHT and HEALING through HUMOR! She has performed in comedy clubs across the globe, including the Improv and the Laugh Factory, and has been featured in both television and live shows, playing characters from Rizzo in Grease, The Musical, to the “TV Reporter” and the “Jewish Relative” among other characters in Michael Lucid's show, <a href="http://prettythingstv.tumblr.com">Pretty Thingsss</a>. Abby continues to uplift humanity through her show: Humor Healing Humanity, and through her stand-up comedy performances.</p> 
+            </div>
+      </div>
+      <div id="speakers_info">
+        <br><br>
+        <h3>Kerstin O’Shields</h3>
+            <img src="images/kerstin.jpg" />
+            <div id="speakers_paragraphs">
+                <p><a href="http://www.kerstinoshields.com/" target="_blank">Kerstin</a> has been teaching and coaching for over 16 years. She loves working with people through the joy of singing and presentation. Working to enhance skills of each individual’s highest potential, the focus is to build a natural foundation that can continue to be strengthened and sharpened through the aspects of the physical, mental, and emotional performance. Through this, she creates an environment of success. </p> 
+            </div>
+      </div>      
+      <div id="speakers_info">
+        <br><br>
+        <h3>Justin Blaney</h3>
+            <img src="images/justin.jpg" />
+            <div id="speakers_paragraphs">
+                <ol>
+                  <li>#1 bestselling author of <a href="http://www.justinblaney.com/" target="_blank">Evan Burl and the Falling</a>, a novel</li>
+                  <li>Producer at <a href="http://www.inkliss.com/" target="_blank">Inkliss</a>, an independent film company</li>
+                  <li><a href="http://portfolio.justinblaney.com/" target="_blank">Photographer</a> for NGOs and domestic non-profits</li>
+                  <li><a href="http://www.justinblaney.com/" target="_blank">Speaker</a> on storytelling, film making and leadership</li>
+                  <li>Founder of <a href="http://zoxsy.com/" target="_blank">Zoxsy</a>, a networking site for musicians and the music industry</li>
+                  <li>Blogger at <a href="http://www.i4j.org/" target="_blank">I4j.org</a>, a platform for helping nonprofits, businesses and people grow</li>
+                  <li>Doctoral candidate at <a href="http://www.umd.edu/" target="_blank">University of Maryland</a> in the field of leadership
+                      Justin, his wife Anna, and their three daughters live in <a href="http://en.wikipedia.org/wiki/Issaquah,_Washington" target="_blank">Issaquah, Washington</a></li>
+                </ol>
+            </div>
+      <div id="speakers_info">
+        <br><br>
+        <h3>Zita Gustin</h3>
+            <img src="images/zita.jpg" />
+            <div id="speakers_paragraphs">
+                <p><a href="http://growthplanstrategies.com/" target="_blank">Zita</a> is a Strategic Planning Coach for Entrepreneurs and Service Professionals who are fabulous at the core of what they do, but want to get clarity and focus around business direction and business growth. </p>
+                <p>I teach them how to look into the future to see clearly what they really want that future to hold and be. Not only their work future, but their personal future as well - because the two are deeply intertwined. That clear vision and focus then helps my clients as we chart out a series of micro-goals that will strategically lead them to their bigger goals. We weave marketing into the plan including attaining expert status, attracting clients, blogging, product creation, time management, and how to grow and maintain connections and relationships that support the client, their clients, and the community at large. </p>
+                <p>Effectively, we create a road map so clients know when they are on or off track, so that they are prepared for the typical hurdles they tend to put in their own way, and it helps them to stay on course when distractions, cross roads, or bright shiny objects come their way.</p>
+            </div>
+        </div> 
+
+
+        <!-- This is the info for Carolyn -->
+
+
+<!--       <div id="speakers_info">
+        <h3>Carolyn Isaacs</h3>
+            <img src="images/carolyn.jpg" />
+            <div id="speakers_paragraphs">
+                <p><a href="http://www.annmariehoughtailing.com/" target="_blank">Carolyn</a> has been a top producing sales consultant for over 20 years, working in both the public and private sector.  Her experience has provided her with the opportunity to work with clients throughout the U.S. and she has enjoyed her travels while learning the distinctions of each state and regions within.</p>
+                <p>Carolyn has been featured as a guest speaker at technology conferences on topics such as Utilizing Social Media, The Power of Automation, and Crafting an Effective Grant Proposal.
+                She recently relocated from downtown Chicago to Seattle, WA to be near her family and looks forward to exploring the majesty of the Pacific Northwest.  Be prepared to enjoy a glass of wine and sharing a travel story or two should you have the chance to meet her.</p>    
+            </div>
+        </div>  -->
+
+      </div>
 	
 	</div><!--close site_content-->  	
   
     <footer>
-    <a href="index.html">Home</a> | <a href="speakers.html">Speakers</a> | <a href="attend.html">Attend</a> | <a href="team.html">Team</a> | <a href="contact.php">Contact Us</a><br/>
+    <a href="index.html">Home</a> | <a href="speakers.html">Speakers</a> | <a href="attend.html">Attend</a> | <a href="team.html">Team</a> | <a href="contact.php">Contact</a><br/>
     Email: <a href="mailto:annasunchoi@gmail.com">annasunchoi@gmail.com</a>
     </footer> 
   
   </div><!--close main-->
   
-  <!-- THIS JAVASCRIPT WOULD NOT ALLOW MY jQUERY Accordion to run -->
-  <!-- javascript at the bottom for fast page loading -->
-<!--   // <script type="text/javascript" src="js/jquery.min.js"></script>
-  // <script type="text/javascript" src="js/image_slide.js"></script> -->
+
   
 </body>
 </html>

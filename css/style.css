@@ -9,7 +9,9 @@ html
 
 *
 { margin: 0;
-  padding: 0;}
+  padding: 0;
+font-family: "myriad-pro";
+font-size: 15px;}
 
 body
 { font: normal 90% Arial, Helvetica, sans-serif;
@@ -87,8 +89,10 @@ header
 { position: relative;
   background: #323232;
   height: 100px;
+  background-color: #C8571D;
   background-image: url(../images/header.jpg);
-  background-repeat: repeat;} 
+  background-repeat: repeat;
+} 
   
 #header_section
 { width: 940px;
@@ -143,11 +147,7 @@ ul#nav li a
   
 ul#nav li.current a, ul#nav li:hover a
 { text-shadow: 1px 1px #000;
-  color: #FFF;
-  background: #0000ff;
-  background: -moz-linear-gradient(#2e2efe, #0000ff);
-  background: -o-linear-gradient(#2e2efe, #0000ff);
-  background: -webkit-linear-gradient(#2e2efe, #0000ff);
+  color: #0000FF;
   border-radius: 7px 7px 7px 7px;
   -moz-border-radius: 7px 7px 7px 7px;
   -webkit-border: 7px 7px 7px 7px;}
@@ -349,6 +349,8 @@ ul img {
 
 /*-----------------Every Page-------------------------------------*/
 
+
+
 .btn.btn-danger{
   position: absolute;
   margin-left: 103%;
@@ -356,11 +358,15 @@ ul img {
   font-size: 16px;
   font-weight: bold;
   font-family: Arial;
-  background-color: black;
+  background-color: #0000ff;
   border:black;
 }
 
   .btn.btn-danger:hover{
+    background-color: #000000;
+  }
+
+  .btn.btn-danger:visited:link:active{
     background-color: #0000ff;
   }
 
@@ -379,7 +385,7 @@ footer a:hover{
 
 footer{
   height: 100px;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 
@@ -411,6 +417,12 @@ footer{
     font-size: 16px;
   }
 
+    #right_content ul li a{
+    list-style-type: none;
+    color: #C8571D;
+    font-size: 16px;
+  }
+
   #right_content p{
     margin-bottom: 0px;
   }
@@ -426,19 +438,7 @@ footer{
   margin-left: auto;
 }
 /*-------------------------------Speakers Page-----------------------*/
-#images-accordion{
-  float: left;
-  margin-right: 10px; 
-  height: 150px;
-  width: 150px;
-  border-radius: 8px;
-}
 
-  #accordion{
-    width: 73%;
-    margin-right: auto;
-    margin-left: auto;
-  }
 
 #speakers_header{
   text-align: center;
@@ -446,6 +446,32 @@ footer{
   color: #C8571D;
 }
 
+#site_content_speakers{
+  width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+  /*overflow: hidden;*/
+}
+
+#speakers_info img{
+  height: 200px;
+  width: 200px;
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#speakers_info{
+  height: auto;
+  /*background-color: blue;*/
+  clear: both;
+  position: relative;
+}
+
+#speakers_paragraphs{
+  width: 650px;
+  margin-left: 300px;
+}
 
 /*-------------------------------------Attend-----------------------*/
 #program_info{
@@ -470,6 +496,13 @@ footer{
 .success_message{
   text-align: center;
   color: green;
+}
+
+/*--------------Team----------------------*/
+
+#team_img_position{
+  width: 182px;
+  margin-left: 40%;
 }
 
 /*------------------------------------contact form--------------------------*/
