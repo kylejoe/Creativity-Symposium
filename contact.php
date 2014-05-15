@@ -23,7 +23,7 @@ session_start();
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
     <!-- favicon -->
-  <link rel="icon" href="images/circle_yellow.ico" type="image/gif" sizes="16x16">
+  <link rel="icon" href="images/favicon.ico" type="image/gif" sizes="16x16">
 </head>
 
 <body>

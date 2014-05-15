@@ -490,18 +490,20 @@ footer{
   color: #C8571D;
   font-weight: bold;
 }
-/*---------------------------Contact----------------------------------*/
+/*---------------------------------Contact----------------------------------*/
 
 .success_message{
   text-align: center;
   color: green;
 }
 
-/*--------------Team----------------------*/
+/*------------------------------------------------Team----------------------*/
 
-#team_img_position{
-  width: 182px;
-  margin-left: 40%;
+
+#images_position{
+  width: 411px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*------------------------------------contact form--------------------------*/
